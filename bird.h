@@ -28,3 +28,48 @@ public:
         std::cout << species << " has died" << std::endl;
      }
 };
+class Duck : public Bird {
+public:
+    std::string species = "Duck";
+    Duck() : Bird("Duck"){
+        cry();
+    }
+    Duck(std::string species): Bird(species){
+        std::cout<<species<<" has borned"<<std::endl;
+    }
+    void display() override;
+    void fly() override;
+    void swim() override;
+    void cry() override;
+    ~Duck() override;
+};
+
+class Penguin : public Bird {
+public: 
+    std::string species = "Penguin";
+    Penguin() : Bird("Penguin") { cry();}
+    Penguin(std::string species): Bird(species){
+        std::cout<<species<<" has borned"<<std::endl;
+    }
+    void display() override;
+    void fly() override;
+    void swim() override;
+    void cry() override;
+
+    ~Penguin() override;
+};
+
+class Eagle : public Bird {
+public:
+    std::string species = "Eagle";
+    Eagle() : Bird("Eagle"){ cry(); }
+    Eagle(std::string species) : Bird(species){
+        std::cout<<species<<" has borned"<<std::endl;
+    }
+    void display() override;
+    void fly() override;
+    void swim() override;
+    void cry() override;
+    ~Eagle() override;
+
+};
